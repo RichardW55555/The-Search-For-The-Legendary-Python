@@ -10,10 +10,11 @@ git clone https://github.com/richardw55555/The-Search-For-The-Legendary-Python.g
 ```
 Grant Permissions
 ```
-chmod +x main.sh
+chmod +x The-Search-For-The-Legendary-Python/main.sh
 ```
 Play
 ```
-./The-Search-For-The-Legendary-Python/main.sh
+The-Search-For-The-Legendary-Python/main.sh
 ```
+
 
