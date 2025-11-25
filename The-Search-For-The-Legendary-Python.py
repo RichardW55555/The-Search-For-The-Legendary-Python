@@ -52,7 +52,7 @@ def main_room():
 
 
 def right_room():
-    global inventory, killed_goblins, inserted_key_card
+    global inventory, killed_goblins, inserted_key
     if not killed_goblins:
         print("You find yourself in a long hallway, there are goblins blocking the way to a door on the other side. What do you do? (Type 'help' if you need help)")
     else:
@@ -72,7 +72,7 @@ def right_room():
             print("You kill the goblins with the sword")
             killed_goblins = True
     elif choice == "forwards":
-        if killed_goblins:
+        if "key" not in inventory and killed_goblins and not inserted_key:
             print("You go to the door on the other side and find a key, there is nothing else, so you leave")
             inventory.append("key")
         else:
@@ -138,12 +138,10 @@ def help():
 def items():
     print(inventory)
 
-inventory = ["key"]
+inventory = []
 placed_ladder = False
 inserted_key = False
 killed_goblins = False
-inserted_key_card = False
-unlocked_door = False
 finished_falling = False
 legendary_python = """
                  .:-==+++++==-:                   
